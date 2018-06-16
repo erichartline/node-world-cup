@@ -25,11 +25,11 @@ module.exports = async args => {
 }
 
 const printContent = json => {
-  const score = `
-    ${json[0].home_team.country} ${json[0].home_team.goals} - ${
+  console.log()
+  const score = `${json[0].home_team.country} ${json[0].home_team.goals} - ${
     json[0].away_team.country
   } ${json[0].away_team.goals}`
-  const time = `    ${json[0].time}`
+  const time = `${json[0].time}`
 
   console.log(chalk.cyan(score))
   console.log(chalk.red(time))

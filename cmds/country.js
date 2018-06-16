@@ -1,6 +1,7 @@
 const ora = require("ora")
 const fetch = require("node-fetch")
 const chalk = require("chalk")
+const moment = require("moment")
 
 module.exports = async args => {
   let fetchedCountry = args.country || args.c
@@ -35,9 +36,17 @@ const printContent = json => {
     const score = `${item.home_team.country} ${item.home_team.goals} - ${
       item.away_team.country
     } ${item.away_team.goals}`
+
     const time = `${item.time}`
+    const matchDate = moment(item.datetime).format("MM/DD/YYYY")
+    const futureDate = moment(item.datetime).fromNow()
+    console.log(chalk.red(matchDate))
     console.log(chalk.cyan(score))
-    console.log(chalk.gray(time))
+    if (time !== "null") {
+      console.log(chalk.gray(time))
+    } else {
+      console.log(chalk.gray(`Will be played in ${futureDate}`))
+    }
     console.log()
   })
 }

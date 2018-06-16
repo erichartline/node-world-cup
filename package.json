@@ -22,6 +22,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "minimist": "^1.2.0",
+    "moment": "^2.22.2",
     "node-fetch": "^2.1.2",
     "ora": "^2.1.0"
   },
