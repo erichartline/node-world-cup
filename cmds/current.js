@@ -30,6 +30,7 @@ const printContent = json => {
     json[0].away_team.country
   } ${json[0].away_team.goals}`
   const time = `    ${json[0].time}`
+
   console.log(chalk.cyan(score))
   console.log(chalk.red(time))
   console.log()

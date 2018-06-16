@@ -20,6 +20,9 @@ module.exports = () => {
     case "today":
       require("./cmds/today")(args)
       break
+    case "country":
+      require("./cmds/country")(args)
+      break
     case "version":
       require("./cmds/version")(args)
       break

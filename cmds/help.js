@@ -1,16 +1,18 @@
 const menus = {
   main: `
-      worldcup [command]
+      worldcup [command] <options>
   
       today .............. show today's games
-      current .............. show the current game
+      current ............ show the current game
+      country ............ show scores by country
       version ............ show package version
-      help ............... show help menu for a command`
+      help ............... show help menu for a command
+      `,
 
-  //   today: `
-  //       worldcup today`,
-  //   current: `
-  //       worldcup current`
+  country: `
+    worldcup country <options>
+
+    --country, -c ........ the country to look up`
 }
 
 module.exports = args => {
