@@ -23,6 +23,9 @@ module.exports = () => {
     case "country":
       require("./cmds/country")(args)
       break
+    case "group":
+      require("./cmds/group")(args)
+      break
     case "version":
       require("./cmds/version")(args)
       break

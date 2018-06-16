@@ -26,12 +26,17 @@ module.exports = async args => {
 
 const printContent = json => {
   console.log()
-  const score = `${json[0].home_team.country} ${json[0].home_team.goals} - ${
-    json[0].away_team.country
-  } ${json[0].away_team.goals}`
-  const time = `${json[0].time}`
+  if (json !== Object) {
+    console.log("There are no teams playing currently.")
+  } else {
+    const score = `${json[0].home_team.country} ${json[0].home_team.goals} - ${
+      json[0].away_team.country
+    } ${json[0].away_team.goals}`
+    const time = `${json[0].time}`
 
-  console.log(chalk.cyan(score))
-  console.log(`⚽️   ${chalk.green(time)}`)
-  console.log(``)
+    console.log(chalk.cyan(score))
+    console.log(`⚽️   ${chalk.green(time)}`)
+  }
+
+  console.log()
 }

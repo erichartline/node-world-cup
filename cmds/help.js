@@ -5,6 +5,7 @@ const menus = {
       today .............. show today's games
       current ............ show the current game
       country ............ show scores by country
+      group .............. show group standings
       version ............ show package version
       help ............... show help menu for a command
       `,
