@@ -1,20 +1,31 @@
 {
   "name": "node-world-cup",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js command line app to get World Cup updates",
   "main": "index.js",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
     "worldcup": "bin/worldcup"
   },
-  "keywords": [],
+  "keywords": [
+    "world cup",
+    "soccer",
+    "football"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "minimist": "^1.2.0",
     "node-fetch": "^2.1.2",
     "ora": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildlifehexagon/node-world-cup.git"
   }
 }
