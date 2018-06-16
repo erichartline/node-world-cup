@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.1.2",
+    "ora": "^2.1.0"
   }
 }
