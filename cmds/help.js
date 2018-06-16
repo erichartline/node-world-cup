@@ -13,7 +13,7 @@ const menus = {
   country: `
     worldcup country <options>
 
-    --country, -c ........ the country to look up`
+    --country, -c ........ the country to look up (use FIFA abbreviation i.e. ISL for Iceland)`
 }
 
 module.exports = args => {
