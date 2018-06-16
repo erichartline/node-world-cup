@@ -32,6 +32,6 @@ const printContent = json => {
   const time = `${json[0].time}`
 
   console.log(chalk.cyan(score))
-  console.log(chalk.red(time))
-  console.log()
+  console.log(`⚽️   ${chalk.green(time)}`)
+  console.log(``)
 }

@@ -33,7 +33,11 @@ const printContent = json => {
     } ${item.away_team.goals}`
     const time = `${item.time}`
     console.log(chalk.cyan(score))
-    console.log(chalk.gray(time))
+    if (time === "full-time") {
+      console.log(`⚽️   ${chalk.green(time)}`)
+    } else {
+      console.log(`⚽️   ${chalk.red(time)}`)
+    }
     console.log()
   })
 }

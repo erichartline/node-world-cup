@@ -21,7 +21,7 @@ module.exports = async args => {
       json = await res.json()
       spinner.stop()
       console.log(`title: ${json.errors.title}
-              detail: ${json.errors.detail}`)
+        detail: ${json.errors.detail}`)
     }
   } catch (err) {
     spinner.stop()
@@ -43,9 +43,9 @@ const printContent = json => {
     console.log(chalk.red(matchDate))
     console.log(chalk.cyan(score))
     if (time !== "null") {
-      console.log(chalk.gray(time))
+      console.log(`⚽️   ${chalk.green(time)}`)
     } else {
-      console.log(chalk.gray(`Will be played in ${futureDate}`))
+      console.log(`⚽️   ${chalk.gray(`Will be played in ${futureDate}`)}`)
     }
     console.log()
   })
