@@ -1,6 +1,7 @@
 const ora = require("ora")
 const fetch = require("node-fetch")
 const chalk = require("chalk")
+const moment = require("moment")
 
 module.exports = async args => {
   const spinner = ora("Fetching today's scores").start()
@@ -33,8 +34,11 @@ const printContent = json => {
     } ${item.away_team.goals}`
     const time = `${item.time}`
     console.log(chalk.cyan(score))
+    const futureDate = moment(item.datetime).fromNow()
     if (time === "full-time") {
       console.log(`⚽️   ${chalk.green(time)}`)
+    } else if (time === "null") {
+      console.log(`⚽️   ${chalk.gray(`Will be played in ${futureDate}`)}`)
     } else {
       console.log(`⚽️   ${chalk.red(time)}`)
     }
