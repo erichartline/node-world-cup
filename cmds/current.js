@@ -26,7 +26,7 @@ module.exports = async args => {
 
 const printContent = json => {
   console.log()
-  if (json !== Object) {
+  if (json === undefined || json.length < 1) {
     console.log("There are no teams playing currently.")
   } else {
     const score = `${json[0].home_team.country} ${json[0].home_team.goals} - ${
