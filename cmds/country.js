@@ -4,35 +4,35 @@ const chalk = require("chalk")
 const moment = require("moment")
 
 module.exports = async args => {
-  if (!args.country || !args.c) {
-    console.log(`You need to enter a FIFA country code to use this command. Try something like:
-      worldcup country -c isl`)
-  } else {
-    let fetchedCountry = args.country || args.c
-    let country = fetchedCountry.toUpperCase()
-    const spinner = ora(`Fetching ${country}'s scores`).start()
+  // if (!args.c || !args.country) {
+  //   console.log(`You need to enter a FIFA country code to use this command. Try something like:
+  //     worldcup country -c isl`)
+  // } else {
+  let fetchedCountry = args.country || args.c
+  let country = fetchedCountry.toUpperCase()
+  const spinner = ora(`Fetching ${country}'s scores`).start()
 
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      res = await fetch(
-        `http://worldcup.sfg.io/matches/country?fifa_code=${country}`
-      )
-      if (res.ok) {
-        json = await res.json()
-        spinner.stop()
-        printContent(json)
-      } else {
-        json = await res.json()
-        spinner.stop()
-        console.log(`title: ${json.errors.title}
-          detail: ${json.errors.detail}`)
-      }
-    } catch (err) {
+  try {
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    res = await fetch(
+      `http://worldcup.sfg.io/matches/country?fifa_code=${country}`,
+    )
+    if (res.ok) {
+      json = await res.json()
       spinner.stop()
-
-      console.error(err)
+      printContent(json)
+    } else {
+      json = await res.json()
+      spinner.stop()
+      console.log(`title: ${json.errors.title}
+          detail: ${json.errors.detail}`)
     }
+  } catch (err) {
+    spinner.stop()
+
+    console.error(err)
   }
+  // }
 }
 
 const printContent = json => {
