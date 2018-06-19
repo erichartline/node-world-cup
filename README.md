@@ -50,7 +50,7 @@ Peru 0 - Denmark 0
 
 ### country
 
-This command will print out every score for a specified country. The country must be specified using `-c` or `--country` followed by their FIFA code (i.e. ARG, ISL, etc.).
+This command will print out every score for a specified country. The country must be specified using `-c` or `--code` followed by their FIFA code (i.e. ARG, ISL, etc.).
 
 ```
 $ worldcup country -c isl

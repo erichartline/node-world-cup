@@ -4,7 +4,7 @@ const menus = {
   
       today .............. show today's games
       current ............ show the current game
-      country ............ show scores by country
+      country <options>... show scores by country
       group .............. show group standings
       version ............ show package version
       help ............... show help menu for a command
@@ -13,7 +13,7 @@ const menus = {
   country: `
     worldcup country <options>
 
-    --country, -c ........ the country to look up (use FIFA abbreviation i.e. ISL for Iceland)`
+    --code, -c ........ the country to look up (use FIFA abbreviation i.e. ISL for Iceland)`
 }
 
 module.exports = args => {
