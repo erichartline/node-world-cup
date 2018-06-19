@@ -7,7 +7,8 @@
     "node": ">=8"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "bin": {
     "worldcup": "bin/worldcup"
@@ -22,10 +23,12 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "cli-table": "^0.3.1",
+    "express": "^4.16.3",
     "minimist": "^1.2.0",
     "moment": "^2.22.2",
     "node-fetch": "^2.1.2",
-    "ora": "^2.1.0"
+    "ora": "^2.1.0",
+    "ws": "^5.2.0"
   },
   "repository": {
     "type": "git",
