@@ -2,8 +2,9 @@ const menus = {
   main: `
       worldcup [command] <options>
   
-      today .............. show today's games
-      current ............ show the current game
+      today .............. show today's matches
+      tomorrow ........... show tomorrow's matches
+      current ............ show the current match
       country <options>... show scores by country
       group .............. show group standings
       version ............ show package version
