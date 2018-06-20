@@ -7,7 +7,7 @@ This uses the [Soccer For Good API](http://worldcup.sfg.io/) to display this yea
 ### Available Commands
 
 1.  **[today](#today)**
-2.  **[today](#tomorrow)**
+2.  **[tomorrow](#tomorrow)**
 3.  **[current](#current)**
 4.  **[country](#country)**
 5.  **[group](#group)**
