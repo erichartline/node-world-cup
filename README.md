@@ -7,11 +7,12 @@ This uses the [Soccer For Good API](http://worldcup.sfg.io/) to display this yea
 ### Available Commands
 
 1.  **[today](#today)**
-2.  **[current](#current)**
-3.  **[country](#country)**
-4.  **[group](#group)**
-5.  **[version](#version)**
-6.  **[help](#help)**
+2.  **[today](#tomorrow)**
+3.  **[current](#current)**
+4.  **[country](#country)**
+5.  **[group](#group)**
+6.  **[version](#version)**
+7.  **[help](#help)**
 
 ### Usage
 
@@ -35,6 +36,20 @@ Peru 0 - Denmark 1
 
 Croatia 2 - Nigeria 0
 ⚽️   full-time
+```
+
+### tomorrow
+
+This command will print out all of tomorrow's upcoming matches.
+
+```
+$ worldcup tomorrow
+
+⚽️   Denmark vs. Australia
+
+⚽️   France vs. Peru
+
+⚽️   Argentina vs. Croatia
 ```
 
 ### current
